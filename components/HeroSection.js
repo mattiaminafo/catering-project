@@ -23,8 +23,8 @@ export default function HeroSection() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero-bg.jpg"
-          alt="Tavolo elegantemente apparecchiato"
+          src="/images/menu9.png"
+          alt="Maria Ingardia Catering"
           fill
           className="object-cover"
           priority
