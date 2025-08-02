@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-16 px-4 md:px-8;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  .hero-overlay {
+    background: linear-gradient(
+      135deg,
+      rgba(184, 92, 56, 0.8) 0%,
+      rgba(140, 59, 36, 0.9) 100%
+    );
+  }
+  
+  .focus-outline {
+    @apply focus-visible:outline-2 focus-visible:outline-primary-light focus-visible:outline-offset-2;
+  }
+}
