@@ -23,11 +23,10 @@ const services = [
     features: [
       'Menù per bambini e adulti',
       'Torte personalizzate',
-      'Allestimento a tema',
       'Animazione culinaria',
     ],
-    price: 'A partire da €35 a persona',
-    image: '/images/service-birthdays.png',
+    price: 'A partire da €20 a persona',
+    image: '/images/menu6.png',
   },
   {
     id: 'romantic',
@@ -39,10 +38,10 @@ const services = [
       'Servizio ai tavoli',
       'Menù afrodisiaci',
       'Mise en place romantica',
-      'Playlist personalizzata',
+ 
     ],
-    price: 'A partire da €50 a persona',
-    image: '/images/service-romantic.png',
+    price: 'A partire da €30 a persona',
+    image: '/images/menu4.JPG',
   },
   {
     id: 'corporate',
@@ -57,7 +56,7 @@ const services = [
       'Menù vegetariani/vegani',
     ],
     price: 'A partire da €40 a persona',
-    image: '/images/service-corporate.png',
+    image: '/images/menu9.png',
   },
 ];
 

@@ -8,76 +8,62 @@ import { useState } from 'react';
 const menuItems = [
   {
     id: 1,
-    name: 'Risotto al Tartufo Nero',
+    name: 'Pasta Frolla Salata',
     description:
-      'Risotto cremoso con tartufo nero di Norcia, parmigiano 24 mesi e burro alle erbe',
+      'Cestini di pasta frolla salata ripieni di crema pasticcera salata e concasse di verdure.',
     image: '/images/menu1.jpg',
     category: 'Primi Piatti',
   },
   {
     id: 2,
-    name: 'Branzino in Crosta di Sale',
+    name: 'Polpette Ricotta e Limone',
     description:
-      'Branzino fresco del Mediterraneo cotto in crosta di sale rosa, servito con salsa verde',
+      'coni di bambù con polpette di ricotta e limone, polpette di melanzane, polpette di manzo al cacao.',
     image: '/images/menu2.jpg',
     category: 'Secondi Piatti',
   },
   {
     id: 3,
-    name: 'Tiramisù Decostruito',
+    name: 'Pizza Bianca al Gel di Limone',
     description:
-      'Reinterpretazione moderna del classico tiramisù con savoiardi, mascarpone e caffè',
+      'pizza bianca al gel di limone ricotta mozzarella di bufala e menta',
     image: '/images/menu3.jpg',
     category: 'Dolci',
   },
   {
     id: 4,
-    name: 'Crudo di Ricciola',
+    name: 'Mix di Pizze al Gel e Focaccia Barese',
     description:
-      'Ricciola marinata con agrumi siciliani, avocado, pomodorini confit e olio EVO',
+      'Pizze bianche e finger food',
     image: '/images/menu4.jpg',
     category: 'Antipasti',
   },
   {
     id: 5,
-    name: 'Agnello alle Erbe',
+    name: 'Torta Demetra',
     description:
-      'Carré di agnello delle Madonie con crosta di erbe aromatiche e riduzione al Barolo',
+      'Torta Demetra a base di patate , prosciutto e verdure',
     image: '/images/menu5.jpg',
     category: 'Secondi Piatti',
   },
   {
     id: 6,
-    name: 'Gnocchi di Patate Viola',
+    name: 'Insalata di Polipo',
     description:
-      'Gnocchi di patate viola con fonduta di caciocavallo e crumble alle nocciole',
-    image: '/images/menu6.jpg',
+      'Insalata di polipo versione finger food',
+    image: '/images/menu9.png',
     category: 'Primi Piatti',
   },
   {
     id: 7,
-    name: 'Polpo alla Galiziana',
+    name: 'Yo-Yo alle arachidi',
     description:
-      'Polpo scottato con patate, paprika affumicata e olio EVO agrumato',
-    image: '/images/menu7.jpg',
+      'Un mignon di dolci',
+    image: '/images/menu9.png',
     category: 'Antipasti',
   },
-  {
-    id: 8,
-    name: 'Filetto di Manzo Rossini',
-    description:
-      'Filetto di manzo con foie gras, tartufo e salsa demi-glace al Porto',
-    image: '/images/menu8.jpg',
-    category: 'Secondi Piatti',
-  },
-  {
-    id: 9,
-    name: 'Semifreddo al Pistacchio',
-    description:
-      'Semifreddo artigianale con pistacchi di Bronte IGP e salsa al cioccolato fondente',
-    image: '/images/menu9.jpg',
-    category: 'Dolci',
-  },
+
+
 ];
 
 /* ---------- COMPONENT ---------- */
@@ -190,7 +176,7 @@ export default function MenuSection() {
         </motion.div>
 
         {/* ---------- DOWNLOAD CTA ---------- */}
-        <motion.div
+{/*         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -204,7 +190,7 @@ export default function MenuSection() {
           <p className="text-sm text-neutral/60 mt-3">
             Oltre 50 piatti tra cui scegliere per il tuo evento
           </p>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
