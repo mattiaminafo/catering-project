@@ -244,7 +244,7 @@ export default function ContactSection() {
               <h4 className="text-xl font-bold mb-4">Pronto per iniziare?</h4>
               <p className="mb-4 text-white/90">
                 Ogni evento merita di essere speciale. Contattami per trasformare 
-                la tua idea in un'esperienza culinaria indimenticabile.
+                la tua idea in un&apos;esperienza culinaria indimenticabile.
               </p>
               <p className="text-accent font-semibold">
                 Consultazione iniziale sempre gratuita!

@@ -60,7 +60,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl mx-auto leading-relaxed"
         >
-          Vivi un'esperienza gastronomica unica con menù personalizzati, 
+          Vivi un&apos;esperienza gastronomica unica con menù personalizzati, 
           materie prime locali e un servizio curato nei minimi dettagli
         </motion.p>
 
