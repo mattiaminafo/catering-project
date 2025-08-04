@@ -193,16 +193,16 @@ export default function ContactSection() {
             <div className="bg-white rounded-3xl shadow-xl p-8">
               <h3 className="text-2xl font-bold text-neutral mb-6">Informazioni di contatto</h3>
               
-              <div className="space-y-4">
-                <div className="flex items-center">
+               <div className="space-y-4">
+              {/* <div className="flex items-center">
                   <div className="bg-primary/10 rounded-full p-3 mr-4">
                     <Phone className="w-5 h-5 text-primary" />
                   </div>
-              {/*     <div>
+                  <div>
                     <p className="font-semibold text-neutral">Telefono</p>
                     <p className="text-neutral/70">+39 328 123 4567</p>
-                  </div>  */}
-                </div>
+                  </div>  
+                </div> */}
                 
                 <div className="flex items-center">
                   <div className="bg-primary/10 rounded-full p-3 mr-4">
