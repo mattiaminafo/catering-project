@@ -6,8 +6,6 @@ export async function submitLead(formData) {
   try {
     // DEBUG: Verifica se l'API key esiste
     console.log('API Key exists:', !!process.env.RESEND_API_KEY);
-    console.log('API Key length:', process.env.RESEND_API_KEY?.length || 0);
-    console.log('API Key starts with re_:', process.env.RESEND_API_KEY?.startsWith('re_'));
     
     if (!process.env.RESEND_API_KEY) {
       console.error('RESEND_API_KEY is not defined!');
@@ -114,16 +112,28 @@ export async function submitLead(formData) {
 
     console.log('Attempting to send email...');
 
-    // TORNA AL DOMINIO RESEND VERIFICATO
-    await resend.emails.send({
-      from: 'onboarding@resend.dev',  // ← DOMINIO RESEND SICURO
+    // QUESTO È IL FIX: aspetta il risultato e gestisci la risposta
+    const result = await resend.emails.send({
+      from: 'onboarding@resend.dev',
       to: ['damamma.net@gmail.com'],
       subject: `Nuova richiesta preventivo - ${leadData.name} (${formattedDate})`,
       html: emailHtml,
       replyTo: leadData.email,
     });
 
-    console.log('Email sent successfully!');
+    // Logga il risultato per debug
+    console.log('Resend result:', result);
+
+    // Controlla se c'è stato un errore
+    if (result.error) {
+      console.error('Resend error:', result.error);
+      return { 
+        success: false, 
+        error: 'Errore durante l\'invio della richiesta. Riprova più tardi.' 
+      };
+    }
+
+    console.log('Email sent successfully with ID:', result.data?.id);
     return { success: true };
 
   } catch (error) {
