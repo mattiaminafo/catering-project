@@ -11,7 +11,7 @@ const menuItems = [
     name: 'Pasta Frolla Salata',
     description:
       'Cestini di pasta frolla salata ripieni di crema pasticcera salata e concasse di verdure.',
-    image: '/images/menu1.jpg',
+    image: '/images/menu1.JPG',
     category: 'Primi Piatti',
   },
   {
@@ -19,7 +19,7 @@ const menuItems = [
     name: 'Polpette Ricotta e Limone',
     description:
       'coni di bambù con polpette di ricotta e limone, polpette di melanzane, polpette di manzo al cacao.',
-    image: '/images/menu2.jpg',
+    image: '/images/menu2.JPG',
     category: 'Secondi Piatti',
   },
   {
@@ -27,7 +27,7 @@ const menuItems = [
     name: 'Pizza Bianca al Gel di Limone',
     description:
       'pizza bianca al gel di limone ricotta mozzarella di bufala e menta',
-    image: '/images/menu3.jpg',
+    image: '/images/menu3.JPG',
     category: 'Dolci',
   },
   {
@@ -35,7 +35,7 @@ const menuItems = [
     name: 'Mix di Pizze al Gel e Focaccia Barese',
     description:
       'Pizze bianche e finger food',
-    image: '/images/menu4.jpg',
+    image: '/images/menu4.JPG',
     category: 'Antipasti',
   },
   {
@@ -43,7 +43,7 @@ const menuItems = [
     name: 'Torta Demetra',
     description:
       'Torta Demetra a base di patate , prosciutto e verdure',
-    image: '/images/menu5.jpg',
+    image: '/images/menu5.JPG',
     category: 'Secondi Piatti',
   },
   {
@@ -51,7 +51,7 @@ const menuItems = [
     name: 'Insalata di Polipo',
     description:
       'Insalata di polipo versione finger food',
-    image: '/images/menu9.png',
+    image: '/images/menu6.png',
     category: 'Primi Piatti',
   },
   {
