@@ -112,9 +112,9 @@ export async function submitLead(formData) {
 
     console.log('Attempting to send email...');
 
-    // QUESTO È IL FIX: aspetta il risultato e gestisci la risposta
+    // USA IL TUO DOMINIO VERIFICATO
     const result = await resend.emails.send({
-      from: 'onboarding@resend.dev',
+      from: 'Chef a Domicilio <noreply@catering.matrimia.it>',
       to: ['damamma.net@gmail.com'],
       subject: `Nuova richiesta preventivo - ${leadData.name} (${formattedDate})`,
       html: emailHtml,
