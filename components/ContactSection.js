@@ -198,10 +198,10 @@ export default function ContactSection() {
                   <div className="bg-primary/10 rounded-full p-3 mr-4">
                     <Phone className="w-5 h-5 text-primary" />
                   </div>
-                  <div>
+              {/*     <div>
                     <p className="font-semibold text-neutral">Telefono</p>
                     <p className="text-neutral/70">+39 328 123 4567</p>
-                  </div>
+                  </div>  */}
                 </div>
                 
                 <div className="flex items-center">
@@ -210,7 +210,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <p className="font-semibold text-neutral">Email</p>
-                    <p className="text-neutral/70">sofia@chef-domicilio.it</p>
+                    <p className="text-neutral/70">info@matrimia.it</p>
                   </div>
                 </div>
                 
@@ -220,7 +220,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <p className="font-semibold text-neutral">Zona di servizio</p>
-                    <p className="text-neutral/70">Milano e provincia (50km)</p>
+                    <p className="text-neutral/70">Cremona e provincia (50km)</p>
                   </div>
                 </div>
               </div>

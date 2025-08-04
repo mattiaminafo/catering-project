@@ -99,10 +99,10 @@ export async function submitLead(formData) {
       </div>
     `;
 
-    // Send only email to chef (no confirmation to client)
+    // Send email to chef
     await resend.emails.send({
       from: 'Chef a Domicilio <onboarding@resend.dev>',
-      to: ['damamma.net@gmail.com'], // ← CAMBIA CON LA TUA EMAIL
+      to: ['damamma.net@gmail.com'],
       subject: `Nuova richiesta preventivo - ${leadData.name} (${formattedDate})`,
       html: emailHtml,
       replyTo: leadData.email,
