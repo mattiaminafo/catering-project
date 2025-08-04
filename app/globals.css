@@ -5,10 +5,32 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    /* Previeni overflow orizzontale */
+    overflow-x: hidden;
+    width: 100%;
   }
   
   body {
     @apply antialiased;
+    /* Previeni movement orizzontale su iOS */
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+    /* Disabilita bounce scroll su iOS */
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: none;
+  }
+
+  /* Assicurati che tutti gli elementi rispettino i bordi */
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Fix specifico per iOS Safari */
+  @supports (-webkit-touch-callout: none) {
+    body {
+      overscroll-behavior: none;
+    }
   }
 }
 
@@ -19,6 +41,9 @@
   
   .container-custom {
     @apply max-w-7xl mx-auto;
+    /* Assicurati che non esca mai dai bordi */
+    width: 100%;
+    overflow-x: hidden;
   }
   
   .hero-overlay {
@@ -31,5 +56,18 @@
   
   .focus-outline {
     @apply focus-visible:outline-2 focus-visible:outline-primary-light focus-visible:outline-offset-2;
+  }
+
+  /* Previeni immagini troppo larghe */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Fix per mobile - riduci padding se necessario */
+  @media (max-width: 768px) {
+    .section-padding {
+      @apply px-3;
+    }
   }
 }
