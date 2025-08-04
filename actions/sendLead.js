@@ -2,10 +2,23 @@
 
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function submitLead(formData) {
   try {
+    // DEBUG: Verifica se l'API key esiste
+    console.log('API Key exists:', !!process.env.RESEND_API_KEY);
+    console.log('API Key length:', process.env.RESEND_API_KEY?.length || 0);
+    console.log('API Key starts with re_:', process.env.RESEND_API_KEY?.startsWith('re_'));
+    
+    if (!process.env.RESEND_API_KEY) {
+      console.error('RESEND_API_KEY is not defined!');
+      return { 
+        success: false, 
+        error: 'Configurazione email non trovata. Contattami direttamente.' 
+      };
+    }
+
+    const resend = new Resend(process.env.RESEND_API_KEY);
+
     const leadData = {
       name: formData.get('name'),
       email: formData.get('email'),
@@ -99,6 +112,8 @@ export async function submitLead(formData) {
       </div>
     `;
 
+    console.log('Attempting to send email...');
+
     // Send email to chef
     await resend.emails.send({
       from: 'Chef a Domicilio <onboarding@resend.dev>',
@@ -108,6 +123,7 @@ export async function submitLead(formData) {
       replyTo: leadData.email,
     });
 
+    console.log('Email sent successfully!');
     return { success: true };
 
   } catch (error) {
