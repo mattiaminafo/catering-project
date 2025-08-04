@@ -114,9 +114,9 @@ export async function submitLead(formData) {
 
     console.log('Attempting to send email...');
 
-    // Send email to chef
+    // TORNA AL DOMINIO RESEND VERIFICATO
     await resend.emails.send({
-      from: 'Chef a Domicilio <noreply@matrimia.it>',
+      from: 'onboarding@resend.dev',  // ← DOMINIO RESEND SICURO
       to: ['damamma.net@gmail.com'],
       subject: `Nuova richiesta preventivo - ${leadData.name} (${formattedDate})`,
       html: emailHtml,
