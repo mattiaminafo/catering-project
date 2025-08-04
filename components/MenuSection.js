@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Download } from 'lucide-react';
 import { useState } from 'react';
+import Image from 'next/image'; // ← AGGIUNTO IMPORT
 
 /* ---------- DATA ---------- */
 const menuItems = [
@@ -62,8 +63,6 @@ const menuItems = [
     image: '/images/menu9.png',
     category: 'Antipasti',
   },
-
-
 ];
 
 /* ---------- COMPONENT ---------- */
@@ -111,16 +110,20 @@ export default function MenuSection() {
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
-              {menuItems.map((item) => (
+              {menuItems.map((item, index) => (
                 <div key={item.id} className="w-full flex-shrink-0">
                   {/* Slide ─ image height drives card height */}
                   <div className="flex flex-col md:flex-row">
                     {/* Image */}
                     <div className="relative md:w-1/2 max-h-[650px]">
-                      <img
+                      <Image
                         src={item.image}
                         alt={item.name}
+                        width={800}
+                        height={600}
                         className="w-full h-auto object-cover"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        priority={index === 0} // Solo la prima immagine ha priority
                       />
                       <div className="absolute top-4 left-4">
                         <span className="badge badge-primary">
@@ -174,23 +177,6 @@ export default function MenuSection() {
             ))}
           </div>
         </motion.div>
-
-        {/* ---------- DOWNLOAD CTA ---------- */}
-{/*         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="text-center mt-12"
-        >
-          <button className="btn btn-secondary btn-lg rounded-full px-8 py-4 font-semibold shadow-lg hover:shadow-xl transition-all duration-300 focus-outline group">
-            <Download className="w-5 h-5 mr-2 group-hover:translate-y-1 transition-transform" />
-            Scarica menù completo PDF
-          </button>
-          <p className="text-sm text-neutral/60 mt-3">
-            Oltre 50 piatti tra cui scegliere per il tuo evento
-          </p>
-        </motion.div> */}
       </div>
     </section>
   );

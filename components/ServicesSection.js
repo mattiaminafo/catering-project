@@ -10,6 +10,7 @@ import {
   Utensils,
 } from 'lucide-react';
 import { useState } from 'react';
+import Image from 'next/image'; // ← AGGIUNTO IMPORT
 import ServiceModal from './ServiceModal';
 
 /* ---------- DATI SERVIZI ---------- */
@@ -100,10 +101,13 @@ export default function ServicesSection() {
               >
                 {/* immagine */}
                 <figure className="relative h-48 overflow-hidden">
-                  <img
+                  <Image
                     src={service.image}
                     alt={service.title}
+                    width={400}
+                    height={300}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                   <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full p-3">
