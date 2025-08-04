@@ -116,7 +116,7 @@ export async function submitLead(formData) {
 
     // Send email to chef
     await resend.emails.send({
-      from: 'Chef a Domicilio <onboarding@resend.dev>',
+      from: 'Chef a Domicilio <noreply@matrimia.it>',
       to: ['damamma.net@gmail.com'],
       subject: `Nuova richiesta preventivo - ${leadData.name} (${formattedDate})`,
       html: emailHtml,
